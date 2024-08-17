@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/settlemint/solidity-token-erc20/blob/main/OG_Solidity.jpg" align="center" alt="logo" />
+  <img src="https://github.com/settlemint/solidity-token-erc1155/blob/main/OG_Solidity.jpg" align="center" alt="logo" />
   <p align="center">
     ✨ <a href="https://settlemint.com">https://settlemint.com</a> ✨
     <br/>
@@ -8,10 +8,10 @@
 </p>
 <br/>
 <p align="center">
-<a href="https://github.com/settlemint/solidity-token-erc20/actions?query=branch%3Amain"><img src="https://github.com/settlemint/solidity-token-erc20/actions/workflows/solidity.yml/badge.svg?event=push&branch=main" alt="CI status" /></a>
-<a href="https://fsl.software" rel="nofollow"><img src="https://img.shields.io/npm/l/@settlemint/solidity-token-erc20" alt="License"></a>
-<a href="https://www.npmjs.com/package/@settlemint/solidity-token-erc20" rel="nofollow"><img src="https://img.shields.io/npm/dw/@settlemint/solidity-token-erc20" alt="npm"></a>
-<a href="https://github.com/settlemint/solidity-token-erc20" rel="nofollow"><img src="https://img.shields.io/github/stars/settlemint/solidity-token-erc20" alt="stars"></a>
+<a href="https://github.com/settlemint/solidity-token-erc1155/actions?query=branch%3Amain"><img src="https://github.com/settlemint/solidity-token-erc1155/actions/workflows/solidity.yml/badge.svg?event=push&branch=main" alt="CI status" /></a>
+<a href="https://fsl.software" rel="nofollow"><img src="https://img.shields.io/npm/l/@settlemint/solidity-token-erc1155" alt="License"></a>
+<a href="https://www.npmjs.com/package/@settlemint/solidity-token-erc1155" rel="nofollow"><img src="https://img.shields.io/npm/dw/@settlemint/solidity-token-erc1155" alt="npm"></a>
+<a href="https://github.com/settlemint/solidity-token-erc1155" rel="nofollow"><img src="https://img.shields.io/github/stars/settlemint/solidity-token-erc1155" alt="stars"></a>
 </p>
 
 <div align="center">
@@ -19,9 +19,9 @@
   <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
   <a href="https://discord.com/invite/Mt5yqFrey9">Discord</a>
   <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-  <a href="https://www.npmjs.com/package/@settlemint/solidity-token-erc20">NPM</a>
+  <a href="https://www.npmjs.com/package/@settlemint/solidity-token-erc1155">NPM</a>
   <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-  <a href="https://github.com/settlemint/solidity-token-erc20/issues">Issues</a>
+  <a href="https://github.com/settlemint/solidity-token-erc1155/issues">Issues</a>
   <br />
 </div>
 
@@ -32,13 +32,13 @@ Launch this smart contract set in SettleMint under the `Smart Contract Sets` sec
 If you want to use it separately, bootstrap a new project using
 
 ```shell
-forge init my-project --template settlemint/solidity-token-erc20
+forge init my-project --template settlemint/solidity-token-erc1155
 ```
 
 Or if you want to use this set as a dependency of your own,
 
 ```shell
-npm install @settlemint/solidity-token-erc20
+npm install @settlemint/solidity-token-erc1155
 ```
 
 ## DX: Foundry & Hardhat hybrid
