@@ -1,9 +1,9 @@
 import { buildModule } from "@nomicfoundation/hardhat-ignition/modules";
 
-const GenericERC20Module = buildModule("GenericERC20Module", (m) => {
-  const counter = m.contract("GenericERC20", ["GenericERC20", "GT"]);
+const GenericERC1155Module = buildModule("GenericERC1155Module", (m) => {
+  const erc1155 = m.contract("GenericERC1155");
 
-  return { counter };
+  return { erc1155 };
 });
 
-export default GenericERC20Module;
+export default GenericERC1155Module;

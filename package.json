@@ -1,7 +1,7 @@
 {
-  "name": "@settlemint/solidity-token-erc20",
-  "description": "Smart contract set to build an ERC20 token in SettleMint",
-  "version": "7.5.3",
+  "name": "@settlemint/solidity-token-erc1155",
+  "description": "Smart contract set to build an ERC1155 token in SettleMint",
+  "version": "7.0.0",
   "private": false,
   "license": "FSL-1.1-MIT",
   "author": {
@@ -9,20 +9,20 @@
     "email": "support@settlemint.com",
     "url": "https://settlemint.com"
   },
-  "homepage": "https://github.com/settlemint/solidity-token-erc20/blob/main/README.md",
+  "homepage": "https://github.com/settlemint/solidity-token-erc1155/blob/main/README.md",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/settlemint/solidity-token-erc20.git"
+    "url": "git+https://github.com/settlemint/solidity-token-erc1155.git"
   },
   "bugs": {
-    "url": "https://github.com/settlemint/solidity-token-erc20/issues",
+    "url": "https://github.com/settlemint/solidity-token-erc1155/issues",
     "email": "support@settlemint.com"
   },
   "keywords": [
     "solidity",
     "subgraph",
     "blockchain-transformation",
-    "erc20"
+    "erc1155"
   ],
   "files": [
     "/contracts",
