@@ -25,46 +25,70 @@
   <br />
 </div>
 
-## Get started
+## Get Started
 
-Launch this smart contract set in SettleMint under the `Smart Contract Sets` section. This will automatically link it to your own blockchain node and make use of the private keys living in the platform.
+This repository provides a generic ERC1155 token contract with functionalities like minting, burning, pausing, and supply tracking. You can either:
 
-If you want to use it separately, bootstrap a new project using
+- **Launch this smart contract set directly in SettleMint**: Under the `Smart Contract Sets` section. This will automatically link the contract to your blockchain node and use the private keys stored in the platform.
+  
+  For detailed instructions on deploying smart contracts using SettleMint, refer to this [deployment guide](https://console.settlemint.com/documentation/docs/using-platform/add_smart_contract_sets/deploying_a_contract/).
 
-```shell
-forge init my-project --template settlemint/solidity-token-erc1155
-```
+- **Integrate it into your own project**:
+  - Bootstrap a new project using Forge:
+    ```shell
+    forge init my-project --template settlemint/solidity-token-erc1155
+    ```
+  - Or, add it as a dependency to your existing project using npm:
+    ```shell
+    npm install @settlemint/solidity-token-erc1155
+    ```
 
-Or if you want to use this set as a dependency of your own,
+### Deploy Contracts & Run Tasks in your Integrated IDE
 
-```shell
-npm install @settlemint/solidity-token-erc1155
-```
+Using SettleMint’s Integrated IDE, you can easily run tasks like compiling, testing, and deploying your contracts. Here’s how to get started:
 
-## DX: Foundry & Hardhat hybrid
+1. Open the Tasks panel by pressing `Cmd + Shift + P` (Mac) or `Ctrl + Shift + P` (Windows/Linux) or by selecting it from the left menu.
+2. Select the desired task from the list. Available tasks include:
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+   - **Foundry - Compile**: Compiles the Foundry contracts.
+   - **Hardhat - Compile**: Compiles the Hardhat contracts.
+   - **Foundry - Test**: Runs tests using Foundry.
+   - **Hardhat - Test**: Runs tests using Hardhat.
+   - **Foundry - Start Network**: Starts a local Ethereum network using Foundry.
+   - **Hardhat - Start Network**: Starts a local Ethereum network using Hardhat.
+   - **Hardhat - Deploy to Local Network**: Deploys contracts to a local network.
+   - **Hardhat - Deploy to Platform Network**: Deploys contracts to the specified platform network.
+   - **The Graph - Build & Deploy**: Builds and deploys the subgraph.
 
-Foundry consists of:
+Alternatively, you can use the IDE terminal to deploy your contract using common commands from [Hardhat](https://hardhat.org/ignition/docs/guides/deploy) or [Foundry](https://book.getfoundry.sh/forge/deploying).
 
-- **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
-- **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
-- **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
-- **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+### Learn More about Foundry and Hardhat
 
-**Hardhat is a Flexible, Extensible, Fast Ethereum development environment for professionals in typescript**
+To fully leverage the capabilities of Foundry and Hardhat, you can explore our comprehensive documentation [here](https://console.settlemint.com/documentation/docs/using-platform/add_smart_contract_sets/smart_contracts/).
 
-Hardhat consists of:
+## ERC1155 Contract Features
 
-- **Hardhat Runner**: Hardhat Runner is the main component you interact with when using Hardhat. It's a flexible and extensible task runner that helps you manage and automate the recurring tasks inherent to developing smart contracts and dApps.
-- **Hardhat Ignition**: Declarative deployment system that enables you to deploy your smart contracts without navigating the mechanics of the deployment process.
-- **Hardhat Network**: Declarative deployment system that enables you to deploy your smart contracts without navigating the mechanics of the deployment process.
+This repository includes a customizable ERC1155 token contract with the following features, powered by OpenZeppelin’s secure libraries:
 
-## Documentation
+- **Mintable**: The contract owner can create new tokens, either individually or in batches.
+- **Burnable**: Token holders can permanently destroy their tokens.
+- **Pausable**: The contract owner can pause and resume all token transfers.
+- **Supply Tracking**: Keeps track of the total supply for each token ID.
 
-- Additional documentation can be found in the [docs folder](./docs).
-- [SettleMint Documentation](https://console.settlemint.com/documentation/docs/using-platform/integrated-development-environment/)
-- [Foundry Documentation](https://book.getfoundry.sh/)
-- [Hardhat Documentation](https://hardhat.org/hardhat-runner/docs/getting-started)
+### Key Functions
 
+- **`pause()` / `unpause()`**: Pauses or resumes all token transfers.
+- **`mint(address account, uint256 id, uint256 amount, bytes memory data)`**: Mints a specified amount of a single token type to a given address.
+- **`mintBatch(address to, uint256[] memory ids, uint256[] memory amounts, bytes memory data)`**: Mints multiple token types in a single transaction.
+- **`burn(address account, uint256 id, uint256 amount)`**: Burns a specified amount of a single token type from a given address.
+- **`burnBatch(address account, uint256[] memory ids, uint256[] memory amounts)`**: Burns multiple token types from a given address in a single transaction.
 
+### OpenZeppelin Libraries Utilized
+
+This contract is built using the following OpenZeppelin libraries to ensure robust and secure functionality:
+
+- **ERC1155**: A standard interface for multi-token contracts.
+- **ERC1155Burnable**: Adds burn functionality to the ERC1155 tokens.
+- **ERC1155Pausable**: Allows the contract owner to pause and resume token transfers.
+- **ERC1155Supply**: Tracks the total supply of each token type.
+- **Ownable**: Provides a simple access control mechanism for the contract owner.
