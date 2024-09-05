@@ -92,3 +92,10 @@ This contract is built using the following OpenZeppelin libraries to ensure robu
 - **ERC1155Pausable**: Allows the contract owner to pause and resume token transfers.
 - **ERC1155Supply**: Tracks the total supply of each token type.
 - **Ownable**: Provides a simple access control mechanism for the contract owner.
+
+## Documentation
+
+- Additional documentation can be found in the [docs folder](./docs).
+- [SettleMint Documentation](https://console.settlemint.com/documentation/docs/using-platform/integrated-development-environment/)
+- [Foundry Documentation](https://book.getfoundry.sh/)
+- [Hardhat Documentation](https://hardhat.org/hardhat-runner/docs/getting-started)
