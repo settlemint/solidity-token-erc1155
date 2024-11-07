@@ -21,7 +21,7 @@ forge init my-project --template settlemint/solidity-token-erc1155
 Or if you want to use this set as a dependency of your own,
 
 ```shell
-npm install @settlemint/solidity-token-erc1155
+bun install @settlemint/solidity-token-erc1155
 ```
 
 ## DX: Foundry & Hardhat hybrid
